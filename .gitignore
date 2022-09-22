@@ -1,0 +1,4 @@
+bin/
+obj/
+Migrations/
+Data/Migrations/ApplicationDbContextModelSnapshot.cs
