@@ -37,6 +37,7 @@ namespace funkostore.Controllers
 
             return View(await productos.ToListAsync());
         }
+        
 
         public async Task<IActionResult> Details(int? id){
             Producto objProduct = await _context.DataProductos.FindAsync(id);
