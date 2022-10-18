@@ -37,6 +37,7 @@ namespace funkostore.Controllers
 
             return View(await productos.ToListAsync());
         }
+        
 
         public async Task<IActionResult> Details(int? id){
             Producto objProduct = await _context.DataProductos.FindAsync(id);
@@ -45,6 +46,7 @@ namespace funkostore.Controllers
             }
             return View(objProduct);
         }
+        //agregar productos en usuarios que iniciaron sesion
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User); //sesion
             if(userID == null){
