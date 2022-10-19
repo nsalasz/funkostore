@@ -9,6 +9,6 @@ namespace funkostore.DTO
     public class Carrito
     {
         public decimal total { get; set; }
-        public List<Proforma> itemsCarrito { get; set; }
+        public List<Proforma>? itemsCarrito { get; set; }
     }
 }
