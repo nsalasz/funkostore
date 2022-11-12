@@ -10,7 +10,7 @@ using funkostore.Models;
 namespace funkostore.Controllers.Rest
 {
     [ApiController]
-    [Route("api/[producto]")]
+    [Route("api/producto")]
     public class ProductoRestController : ControllerBase
     {        
         private readonly ApplicationDbContext _context;
