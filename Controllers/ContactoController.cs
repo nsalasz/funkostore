@@ -33,7 +33,7 @@ namespace funkostore.Controllers
         {
             _context.Add(objContacto);
             _context.SaveChanges();
-            return View("Index");
+            return View("gracias");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
