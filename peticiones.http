@@ -1,3 +1,22 @@
+GET https://localhost:7081/api/producto HTTP/1.1
+Accept: application/json
+
+GET https://localhost:7081/api/producto/1 HTTP/1.1
+Accept: application/json
+
+POST https://localhost:7081/api/producto HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Funko de",
+  "descripcion": "20 pulgadas",
+  "precio": 15.50,
+  "porcentajeDescuento": 0,
+  "imageName": "saitama.jpg",
+  "status": "Activo"
+}
+
 GET https://gorest.co.in/public/v2/users HTTP/1.1
 
 POST https://gorest.co.in/public/v2/users HTTP/1.1
