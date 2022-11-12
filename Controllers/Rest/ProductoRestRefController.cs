@@ -12,7 +12,7 @@ using funkostore.Services;
 namespace funkostore.Controllers.Rest
 {
     [ApiController]
-    [Route("api/[productoref]")]
+    [Route("api/productoref")]
     public class ProductoRestRefController : ControllerBase
     {
         private readonly ProductoService _service;
