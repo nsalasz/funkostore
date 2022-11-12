@@ -1,13 +1,25 @@
 @model funkostore.Models.Contacto
 
 @{
-    ViewData["Title"] = "Contactos";
+    ViewData["Title"] = "";
 }
 <h1>@ViewData["Title"]</h1>
 <header class=>
-
+<h5 class="display-6">¿Necesitas ayuda?</h5>
+<h5 class="display-6">Contactenos</h5>
 
 <div class="text-center">
+    <div class="text-center">
+        
+
+        <img src="https://fsymbols.com/images/phone-icon.png" class="rounded float-left" alt="..." height="130px">
+       
+            <h5>Llamenos al</h5>
+            <h5>(XX)XXX-XX</h5>
+            <h5>de Lunes a Sabado</h5>
+            <h5>de 9:00 a 19:00 h.</h5>        
+        
+    </div>
     <h1 class="display-4">Contactenos</h1>
 
     <form asp-controller="Contacto" asp-action="Create">
