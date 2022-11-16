@@ -9,15 +9,16 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-
+<br>
 <a class="btn btn-primary" asp-controller="Pago" 
         asp-action="Create" asp-route-monto="@montoTotal">Pagar</a><p>Total S/. @montoTotal</p>
 
-<table class="table">
+<table class="table table-success table table-striped">
     <thead>
         <tr>
+            <th>Imagen</th>
             <th>
-                @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Producto.Name)
+                Nombre
             </th>
             <th>
                 @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Cantidad)
@@ -25,12 +26,19 @@
             <th>
                 @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Precio)
             </th>
-            <th></th>
+            <th>Opciones</th>
         </tr>
     </thead>
     <tbody>
 @foreach (Proforma item in Model.elementosCarrito) {
         <tr>
+            <td>
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="50" height="50"src="/Images/@item.Producto.ImageName" alt="@item.Producto.ImageName"  />
+                  </div>
+                </div>
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Producto.Name)
             </td>
@@ -41,8 +49,8 @@
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
             </td>
         </tr>
 }

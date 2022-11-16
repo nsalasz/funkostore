@@ -16,3 +16,78 @@ html {
 body {
   margin-bottom: 60px;
 }
+.card{
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.card:hover{
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+  transform: translateY(-3%);
+}
+.card .img-responsive{
+  width: 100%;
+  height: 200px;
+}
+.card .card-body{
+  padding: 15px;
+  text-align: center;
+}
+
+.form-login{
+text-align: center;  
+width: 400px;
+background:#000000 ;
+padding: 30px;
+margin: auto;
+margin-top: 100px;
+border-radius: 4px;
+font-family: 'calibri';
+color: white;
+top: 50%;
+left: 50%;
+transform: translate(+80%,-10%);
+}
+.form-login a{
+  color: white;
+}
+.form-floating{
+  color: #000000;
+  font-size: 24px;
+  border-radius: 4px;
+  
+  font-family: 'calibri';
+}
+.form-register{
+  text-align: center;
+  width: 400px;
+  background:#000000 ;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  top: 50%;
+left: 50%;
+transform: translate(+80%,-10%);
+  }
+  .form-register a{
+    color: white;
+  }
+
+ .pago{  
+  text-align: left;
+  margin-left: 10%;
+  margin-right:10%;
+ }
+ .pago .control-label{
+  text-align: left;
+  padding: 18px;
+  width: 400px;
+ }

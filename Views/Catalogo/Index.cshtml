@@ -15,15 +15,17 @@
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="card-img-actions">
+                    <center>
                     <img class="img-responsive" width="96" height="150"
                        src="/images/@item.ImageName" alt="@item.ImageName"  />
+                    </center>
                   </div>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                   <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
-                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id"><img src="https://img.icons8.com/metro/512/add-shopping-cart.png" width="25" height="22"/> Agregar</a>
+                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Ver</a>
                 </div>
               </div>
             </div>
