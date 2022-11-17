@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/funkostore.styles.css" asp-append-version="true" />
-</head>
+<script src="https://kit.fontawesome.com/dfba2494f1.js" crossorigin="anonymous"></script></head>
 <body style="background-color:#F5F5F5;">
     <header>
         <nav class="navbar navbar-expand-lg text-dark" style="background-color: #007CEC;">
@@ -34,12 +34,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">𝘾𝘼𝙏𝘼𝙇𝙊𝙂𝙊</a>
                         </li>
-                         <partial name="_MenuPartial" /> 
-                        <li class="nav-item">
-                            <form asp-controller="Catalogo" asp-action="Index">
-                                <input type="text" name="searchString"><input type="submit" value="Buscar" />
-                            </form>
-                        </li> 
+                         <partial name="_MenuPartial" />    
+                         <li class="nav-item">
+                            <div class="buscar">
+                                <form asp-controller="Catalogo" asp-action="Index">
+                                 <input class="lupa" type="text" name="searchString">
+                                 <input class="busq" type="submit" value="buscar"  />
+                                </form>
+                            </div>    
+                        </li>                      
                     </ul>
                     <partial name="_LoginPartial" />
                     <partial name="MiPartial" />
@@ -52,12 +55,39 @@
             @RenderBody()
         </main>
     </div>
+    
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="https://www.nintenderos.com/wp-content/uploads/2020/09/Funko.jpg" alt="">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre nosotros</h2>
+                <p></p>
+                <p> Somos Funko Store importador para todo tipo de coleccionista Funko, </p>
+                <p> funko Pop!, Vinyl, Anime, Manga, Comic, Videojuegos, Figuras de </p>
+                <p>Colección,  marvel, Banpresto, Bandai, Megahouse, etc. Productos 100% originales</p>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b> Funko Store </b>- Todos los derechos reservados.</small>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - funkostore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Nosotros</a>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
